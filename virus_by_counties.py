@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-my_df = pd.read_csv("us-counties.csv")
+my_df = pd.read_csv("test_data.csv")
 
 state = str(input("What state would you like to consult? Example: Washington \n").lower().capitalize())
 county = str(input("Enter county (insert all to remove filter) \n").lower().capitalize())
