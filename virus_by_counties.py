@@ -5,13 +5,16 @@ my_df = pd.read_csv("test_data.csv")
 
 while True:
     print("Welcome to this exercise")
-    
+
     state = str(input("What state would you like to consult? Example: Washington \n").lower().capitalize())
     county = str(input("Enter county (insert all to remove filter) \n").lower().capitalize())
 
     try:
-        if state == "" or county == "":
-            print("The values you entered were not valid. Try again")
+        if state == "":
+            print("The value you entered is valid. Try again")
+        else:
+            if county == "":
+                print("The value you entered is valid. Try again")
         else:
             new_df =  my_df[my_df['state'] == state]
             if county != "All":
