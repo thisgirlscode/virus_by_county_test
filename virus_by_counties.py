@@ -7,6 +7,7 @@ state = str(input("What state would you like to consult? Example: Washington \n"
 county = str(input("Enter county (insert all to remove filter) \n").lower().capitalize())
 
 while True:
+    print("Welcome to this exercise")
     try:
         if state == "" or county == "":
             print("The values you entered were not valid. Try again")
@@ -22,6 +23,9 @@ while True:
         print("Exception occurred: {}".format(e))
         break
 
+print("\n")
+print("THIS IS A COPY OF SAMPLE data and it is only for the purposes of this exercise")
+print("\n")
 print("Last update in {} {}: ".format(state,county))
 print("Total cases: {}".format(tot_cases))
 print("Total deaths: {}".format(tot_deaths))
