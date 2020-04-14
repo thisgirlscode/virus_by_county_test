@@ -15,10 +15,10 @@ while True:
         else:
             if county == "":
                 print("The value you entered is valid. Try again")
-        else:
-            new_df =  my_df[my_df['state'] == state]
-            if county != "All":
-                new_df = new_df[new_df['county'] == county]
+            else:
+                new_df =  my_df[my_df['state'] == state]
+                if county != "All":
+                    new_df = new_df[new_df['county'] == county]
 
                 tot_cases = new_df['cases'].value_counts().sum()
                 tot_deaths = new_df['deaths'].value_counts().sum()
